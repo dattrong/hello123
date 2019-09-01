@@ -20,7 +20,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <i class="fa fa-remove"></i>
     </a>
       
-      <img src="images/logo.PNG" style="width:65%;" class=" w3-display-topmiddle w3-container"><br><br><br><br><br><br><br><br><br>
+      <img src="images/1.PNG" style="width:100%;" class=" w3-display-topmiddle w3-container"><br><br><br><br><br><br><br><br><br>
       
     <h4 style="text-align: center"><b> </b></h4>
     <p class="w3-text-grey"></p>
@@ -45,7 +45,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                         <li><a href="#Princess">Princess</a></li>
                         <li><a href="#Black Baby">Black Baby</a></li>
                         <li><a href="#Mermaid">Mermaid</a></li>
-                        <li><a href="./login.php" style="margin-left:800px">Admin</a></li>
+                        <li><a href="./login.php">Admin</a></li>
 
                     </ul>
   <!--End of Header -->
