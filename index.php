@@ -1,192 +1,276 @@
 <!DOCTYPE html>
 <html>
-<title>Lego World</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <title>Baby lady</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            .container{
+                width: 90%;
+                margin: 0 auto;
+            }
+            .container img{
+                width: 40%;
 
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+            }
+            .footer{
+                width: 100%;
+                height: 100px;
+                background-color: black;
+            }
+            .main{
+                width: 100%;
+                overflow: hidden;
+                background-color: white;
+            }
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3; width:300px;" id="mySidebar"><br>
-  <div class="w3-container w3-bottombar w3-border-red">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-large w3-padding w3-hover-red" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-      
-      <img src="images/1.jpg" style="width:65%;" class=" w3-display-topmiddle w3-container"><br><br><br><br><br><br><br><br><br>
-      
-    <h4 style="text-align: center"><b> </b></h4>
-    <p class="w3-text-grey"></p>
-  </div>
-    <br><br>
-  <div class="w3-bar-block">
-    <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOMEPAGE</a> 
-    <a href="index-product.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bars fa-fw w3-margin-right"></i>PRODUCT</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-    
-  </div>
-  
-  
-</nav>
-<!--End of Sidebar/menu -->
+            .image img{
+                width: 100%;
+            }
+            .detail{
+                width: 100%;
+                float: right;
+                text-align: center;
+            }
+            .title{
+                background-color: white;
+                font-size: 25px;
+                line-height: 30px;
+                padding-left: 5px;
+                font-weight: bold;
+                color: red;
+            }
+            .detail{
+                padding-left: 15px;
+                box-sizing: border-box;
+            }
+            .des{
+                color: greenyellow;
+                font-size: 18px;
+                padding-left: 10px;
+                padding-top: 10px;
+                font-weight: normal;
+            }
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+            .list{
+                width: 100%;
+                padding-top: 10px;
+            }
+            .item{
+                width: 25%;
+                float: left;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+            .iimage img{
+                width: 100%;
+                height : 50%;
+            }
+           
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+            .nav{
+                width: 100%;
+                height: 50px;
+                background-color: black;
+            }
+            .nav ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .nav a{
+                color:whitesmoke;
+                font-size: 30px;
+                text-decoration: none;
+                line-height: 50px;
+                padding: 0 15px;
+                display: block;
+            }
+            .nav li{
+                float: left;
+            }
+            .nav a:hover{
+                color: #792323;
+            }
+            .nav li:hover{
+                background-color:#DCF4F6;
+            }
+        </style>
+    </head>
+    <body>
+        <?php
+require_once './functions.php';
+//load items
+$query = "SELECT iid, iname, idescription, iprice, istatus, isize, iimage FROM Item ";
+$result = queryMysql($query);
+$error = $msg = "";
+if (!$result){
+    $error = "Couldn't load data, please try again.";
+}
+?>
 
-  <!-- Header -->
-  <header>
-      <a href="#"><img src="images/logo.PNG" style="width:60px; border-style: solid" class="w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    
-        <div class="w3-container ">
-            <div class="w3-panel w3-sand w3-padding-16">
-                <h1 style="text-align: center; font-family: Bahnschrift">WELCOME TO THE WORLD OF LEGO</h1>
+        <div class="container">
+            <center><img src="images/1.jpg"></center>
+            <div class="header">
+                
+                <div class="nav">
+                    <ul>
+                        <li><a href="./index.php">Home</a></li>
+                        <li><a href="#Princess">Princess</a></li>
+                        <li><a href="#Black Baby">Black Baby</a></li>
+                        <li><a href="#Mermaid">Mermaid</a></li>
+                        <li><a href="./login.php" style="margin-left:800px">Admin</a></li>
+
+                    </ul>
+
+
+                </div>
             </div>
-        <div class="w3-content w3-section " style="max-width:750px">
-                <img class="mySlides" src="images/lego1.jpg" style="width:100%">
-                <img class="mySlides" src="images/lego2.jpg" style="width:100%">
-                <img class="mySlides" src="images/lego3.jpg" style="width:100%">
+
+                
+                <div class="list w3-row">
+                    <div class="" id="Princess"><h2>Princess</h2>
+                    <?php
+     require_once './functions.php';
+     $query = "SELECT iid, iname, idescription, iprice, istatus, isize, iimage,cname FROM Item,Catalogue WHERE Item.catalogueId=Catalogue.cId AND cName LIKE '%Bag%'  ORDER BY cName";
+     $result = queryMysql($query);
+     $error = $msg = "";
+     if (!$result){
+      $error = "Couldn't load data, please try again.";
+     }
+     while ($row = mysqli_fetch_array($result)) {
+        $iId = $row['iid'];
+        $iName = $row['iname'];
+        $iDescription = $row['idescription'];
+        $iPrice = $row['iprice'];
+        $iStatus = $row['istatus'];
+        $iSize = $row['isize'];
+        $iImage = $row['iimage'];
+        
+        echo "<div class='sp w3-quarter w3-card w3-center ' ><div class='w3-orange w3-padding-large'>$istatus</div><div ><img onclick=\"document.getElementById('$iname').style.display='block'\" id='testimg' src='./images/item/". $iimage . "' width='100%'></div><div class='name'><h3>$iname</h3></div><h3>$iprice$</h3></div>"
+                . "<!--SHOW MORE INFORMATION-->
+  <div id='$iname' class='w3-modal'>
+      <div class='w3-modal-content w3-animate-top w3-card-4'>
+        <div class='w3-container w3-orange w3-center w3-padding-20'> 
+          <span onclick=\"document.getElementById('$iname').style.display='none';\"
+         class='w3-button w3-orange w3-xlarge w3-display-topright'>×</span>
+          <h2>$iname</h2>
+        </div>
+        <div class='w3-container w3-row'>
+          <div class='w3-half'>
+              <img src='./images/item/". $iimage . "' width='100%'>
+          </div>
+          <div class='w3-half w3-left'>
+              <h3>$iprice$</h3>
+              <p>$idescription.</p>
+              <h4>$isize</h4>                           
+          </div>                                                    
+        </div>
+        <button class='w3-button w3-orange w3-section' onclick=\"document.getElementById('$iname').style.display='none';\">Close <i class='fa fa-remove'></i></button>
+      </div>
+    </div>";                                                                                       
+    }
+?>
+     
+                </div>        
+                    <div class="list w3-row">
+                    <div class=""id="BlackBaby"><h2>BlackBaby</h2>
+                    <?php
+     require_once './functions.php';
+     $query = "SELECT iid, iname, idescription, iprice, istatus, isize, iimage,cname FROM Item,Catalogue WHERE Item.catalogueId=Catalogue.cId AND cName LIKE '%Leather%'  ORDER BY cName";
+     $result = queryMysql($query);
+     $error = $msg = "";
+     if (!$result){
+      $error = "Couldn't load data, please try again.";
+     }
+     while ($row = mysqli_fetch_array($result)) {
+        $iId = $row['iid'];
+        $iName = $row['iname'];
+        $iDescription = $row['idescription'];
+        $iPrice = $row['iprice'];
+        $iStatus = $row['istatus'];
+        $iSize = $row['isize'];
+        $iImage = $row['iimage'];
+        
+        echo "<div class='sp w3-quarter w3-card w3-center ' ><div class='w3-orange w3-padding-large'>$iStatus</div><div ><img onclick=\"document.getElementById('$iName').style.display='block'\" id='testimg' src='./images/item/". $iImage . "' width='100%'></div><div class='name'><h3>$iName</h3></div><h3>$iPrice$</h3></div>"
+                . "<!--SHOW MORE INFORMATION-->
+  <div id='$iname' class='w3-modal'>
+      <div class='w3-modal-content w3-animate-top w3-card-4'>
+        <div class='w3-container w3-orange w3-center w3-padding-20'> 
+          <span onclick=\"document.getElementById('$iname').style.display='none';\"
+         class='w3-button w3-orange w3-xlarge w3-display-topright'>×</span>
+          <h2>$iname</h2>
+        </div>
+        <div class='w3-container w3-row'>
+          <div class='w3-half'>
+              <img src='./images/item/". $iimage . "' width='100%'>
+          </div>
+          <div class='w3-half w3-left'>
+              <h3>$iprice$</h3>
+              <p>$idescription.</p>
+              <h4>$isize</h4>                           
+          </div>                                                    
+        </div>
+        <button class='w3-button w3-orange w3-section' onclick=\"document.getElementById('$iname').style.display='none';\">Close <i class='fa fa-remove'></i></button>
+      </div>
+    </div>";                                                                                       
+    }
+?>
+     
+                </div>
+                                        </div>        
+                    <div class="list w3-row">
+                    <div class=""id="Mermaid"><h2>Mermaid</h2>
+                    <?php
+     require_once './functions.php';
+     $query = "SELECT iid, iname, idescription, iprice, istatus, isize, iimage,cname FROM Item,Catalogue WHERE Item.catalogueId=Catalogue.cId AND cName LIKE '%Pants%'  ORDER BY cName";
+     $result = queryMysql($query);
+     $error = $msg = "";
+     if (!$result){
+      $error = "Couldn't load data, please try again.";
+     }
+     while ($row = mysqli_fetch_array($result)) {
+        $iId = $row['iid'];
+        $iName = $row['iname'];
+        $iDescription = $row['idescription'];
+        $iPrice = $row['iprice'];
+        $iStatus = $row['istatus'];
+        $iSize = $row['isize'];
+        $iImage = $row['iimage'];
+        
+        echo "<div class='sp w3-quarter w3-card w3-center ' ><div class='w3-orange w3-padding-large'>$istatus</div><div ><img onclick=\"document.getElementById('$iname').style.display='block'\" id='testimg' src='./images/item/". $iimage . "' width='100%'></div><div class='name'><h3>$iname</h3></div><h3>$iprice$</h3></div>"
+                . "<!--SHOW MORE INFORMATION-->
+  <div id='$iname' class='w3-modal'>
+      <div class='w3-modal-content w3-animate-top w3-card-4'>
+        <div class='w3-container w3-orange w3-center w3-padding-20'> 
+          <span onclick=\"document.getElementById('$iname').style.display='none';\"
+         class='w3-button w3-orange w3-xlarge w3-display-topright'>×</span>
+          <h2>$iname</h2>
+        </div>
+        <div class='w3-container w3-row'>
+          <div class='w3-half'>
+              <img src='./images/item/". $iimage . "' width='100%'>
+          </div>
+          <div class='w3-half w3-left'>
+              <h3>$iprice$</h3>
+              <p>$idescription.</p>
+              <h4>$isize</h4>                           
+          </div>                                                    
+        </div>
+        <button class='w3-button w3-orange w3-section' onclick=\"document.getElementById('$iname').style.display='none';\">Close <i class='fa fa-remove'></i></button>
+      </div>
+    </div>";                                                                                       
+    }
+?>
+     
+                </div>
+
+                        
+            </div>
+            <div class="footer">
             </div>
         </div>
-  </header>
-  <!--End of Header -->
-        
- 
-  
-  
-
-  <!-- ABOUT -->
-<div class="w3-container w3-padding-large w3-grey">
-  <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m4">
-        <img src="images/About.PNG" style="width:70%; border-style: solid; border-color: black">
-    </div>
-    <div class="w3-col m8 about-style">
-        <h4><b>ABOUT THE LEGO WORLD</b></h4>
-        <p>
-            The LEGO WORLD is a privately held, family-owned company with headquarters in Billund, Denmark, and main offices in Enfield, USA, London, UK, Shanghai, China, and Singapore. Founded in 1932 by Ole Kirk Kristiansen, and based on the iconic LEGO® brick, it is one of the world's leading manufacturers of play materials.
-        </p>
-    </div>
-  </div>
-  
-  <div class="w3-row-padding w3-padding-16">
-    <div class="w3-col m8 about-style">
-        <p>
-             Specialist in high quality toys with EDUCATION and help CREATE CREATIVITY for children
-        </p>
-        <p>
-            All products are approved by international standards, ensuring QUALITY and absolute SAFETY
-        </p>
-        <p>
-            Diversified with over 1,000 types of items for children of all ages
-        </p>
-        
-    </div>
-    <div class="w3-col m4">
-        <img src="images/About1.png" style="width:70%" class="w3-right">
-    </div>
-  </div> 
-</div>
-  
-
-  
-    
-    
-<div class="w3-container w3-padding-large" style="margin-bottom:32px"> 
-    
-    <h4>Should you believe in our shop?</h4>
-    <!-- Progress bars / Skills -->
-    <p>Yes, you should</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:100%">100%</div>
-    </div> 
-       
-</div>
-  
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p>thanhldgch17337@fpt.edu.vn</p>
-      </div>
-      <div class="w3-third w3-teal">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-        <p>Chicago, US</p>
-      </div>
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>512312311</p>
-      </div>
-    </div>
-    
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
-	  <div class="w3-row-padding">
-	    <div class="address-style">
-	      <h4><b>Address</b></h4>
-	        <p>4043 N Ravenswood Ave, Chicago, IL 60613</p>
-	        <p>United States</p>
-	    </div> 
-	    
-
-	    <div class="address-style">
-	      <h4><b>Popular tags</b></h4>
-	      <p>
-	        <span class="w3-tag w3-black w3-margin-bottom">LEGO</span> 
-	        <span class="w3-tag w3-grey w3-small w3-margin-bottom">LEGO Technic</span>
-	        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Creative</span>
-	        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Intelligent</span>        
-	      </p>
-	    </div>
-
-	  </div>
-  </footer>
-  
-  <div class="w3-black w3-center w3-padding-24">Powered by LEGO World</div>
-
-</div> <!-- End page content -->
-
-	<script>
-		// Script to open and close sidebar
-		function w3_open() {
-		    document.getElementById("mySidebar").style.display = "block";
-		    document.getElementById("myOverlay").style.display = "block";
-		}
-		 
-		function w3_close() {
-		    document.getElementById("mySidebar").style.display = "none";
-		    document.getElementById("myOverlay").style.display = "none";
-		}
-	</script>
-
-	<script>
-		var myIndex = 0;
-		carousel();
-
-		function carousel() {
-		  var i;
-		  var x = document.getElementsByClassName("mySlides");
-		  for (i = 0; i < x.length; i++) {
-		    x[i].style.display = "none";  
-		  }
-		  myIndex++;
-		  if (myIndex > x.length) {myIndex = 1}    
-		  x[myIndex-1].style.display = "block";  
-		  setTimeout(carousel, 5000); // Change image every 5 seconds
-		}
-	</script>
-</body>
+    </body>
 </html>
+
+
