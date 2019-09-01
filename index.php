@@ -18,7 +18,7 @@
       <i class="fa fa-remove"></i>
     </a>
       
-      <img src="images/logo.PNG" style="width:65%;" class=" w3-display-topmiddle w3-container"><br><br><br><br><br><br><br><br><br>
+      <img src="images/1.jpg" style="width:65%;" class=" w3-display-topmiddle w3-container"><br><br><br><br><br><br><br><br><br>
       
     <h4 style="text-align: center"><b> </b></h4>
     <p class="w3-text-grey"></p>
