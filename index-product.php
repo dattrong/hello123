@@ -39,14 +39,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header>
-      <a href="#"><img src="images/logo.PNG" style="width:60px; border-style: solid" class="w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-bar w3-black">
-        <a href="admin.php" class="w3-bar-item w3-button w3-right fa fa-male w3-hover-red">ADMIN</a>  
-    </div>
-        
-  </header>
+   <div class="nav">
+                    <ul>
+                        <li><a href="./index.php">Home</a></li>
+                        <li><a href="#Princess">Princess</a></li>
+                        <li><a href="#Black Baby">Black Baby</a></li>
+                        <li><a href="#Mermaid">Mermaid</a></li>
+                        <li><a href="./login.php" style="margin-left:800px">Admin</a></li>
+
+                    </ul>
   <!--End of Header -->
   
     <div class="container w3-padding-large" id="portfolio">
