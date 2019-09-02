@@ -25,9 +25,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                     <center><img src="images/1.jpg" style="margin-right:30%" style="max-width: 100%" ></center>
                     <div class="w3-bar w3-papayawhip" style="padding-left: 20%">
                         <a href="index.php"class="w3-bar-item w3-button w3-mobile" >Home</a>
-                        <a href="#Princess" class="w3-bar-item w3-button w3-mobile">Prinsess</a>
-                        <a href="#BlackBaby" class="w3-bar-item w3-button w3-mobile">BlackBaby</a>
-                        <a href="#Mermaid" class="w3-bar-item w3-button w3-mobile">Mermaid</a>
+                        <a href="admin.php"class="w3-bar-item w3-button w3-mobile" >Admin</a>
 
                     </div>
                                 </div>
