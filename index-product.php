@@ -30,19 +30,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                         <a href="#Mermaid" class="w3-bar-item w3-button w3-mobile">Mermaid</a>
 
                     </div>
-                    <div class="list w3-row" style="color: plum">
-                        <div class="" id="Princess" style="width: 500px"><h2>Princess</h2>
-                            <img class="mySlides" src="images/8.jpg" style="width:100%">
-                        </div>        
-                        <div class="list w3-row" style="color: plum">
-                            <div class=""id="BlackBaby" style="width: 500px"><h2>BlackBaby</h2>
-                                <img class="mySlides" src="images/7.jpg" style="width:100%">
-                                <div class="list w3-row" style="color: plum">
-                                    <div class=""id="Mermaid" style="width: 500px"><h2>Mermaid</h2>
-                                        <img class="mySlides" src="images/3.jpg" style="width:100%">
-
-
-                                    </div>
                                 </div>
                                 </header>
  
